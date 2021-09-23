@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from usersapp.views import TODOUserViewSet
+from projectapp.views import UsersProjectViewSet, TODOViewSet
 
 router = DefaultRouter()
 router.register('tduser', TODOUserViewSet)
+router.register('usersproj', UsersProjectViewSet)
+router.register('todo', TODOViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
