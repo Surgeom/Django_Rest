@@ -14,7 +14,7 @@ class UsersProjectSerializer(ModelSerializer):
 
 
 class TODOSerializer(ModelSerializer):
-    td_user = TODOUserSerializer(many=True)
+    td_user = TODOUserSerializer()
     todo_project = UsersProjectSerializer()
 
     class Meta:
