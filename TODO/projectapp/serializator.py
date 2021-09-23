@@ -5,7 +5,8 @@ from .models import UsersProject, TODO
 
 # HyperlinkedModelSerializer как вариант
 class UsersProjectSerializer(ModelSerializer):
-    td_users = TODOUserSerializer().fields['username']
+    td_users = TODOUserSerializer(many=True)
+
 
     class Meta:
         model = UsersProject
@@ -13,7 +14,7 @@ class UsersProjectSerializer(ModelSerializer):
 
 
 class TODOSerializer(ModelSerializer):
-    td_user = TODOUserSerializer().fields['username']
+    td_user = TODOUserSerializer(many=True)
     todo_project = UsersProjectSerializer()
 
     class Meta:
