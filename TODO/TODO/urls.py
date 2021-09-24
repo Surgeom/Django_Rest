@@ -20,10 +20,13 @@ from usersapp.views import TODOUserViewSet
 from projectapp.views import UsersProjectViewSet, TODOViewSet
 
 router = DefaultRouter()
-router.register('tduser', TODOUserViewSet)
+# router.register('tduser', TODOUserViewSet)
 router.register('usersproj', UsersProjectViewSet)
 router.register('todo', TODOViewSet)
+router.register('tdusers', TODOUserViewSet, basename='tdusers')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    # path('api/user2', TODOUserViewSet1.as_view()),
 ]
