@@ -20,40 +20,7 @@ class App extends React.Component{
         this.state={
             'tdusers':[],
             'projects':[],
-            'todos':[{
-            "id": 1,
-            "td_user": {
-                "id": 1,
-                "username": "Surgeom",
-                "first_name": "Кирилл",
-                "last_name": "Ушакевич",
-                "email": "ush@gmail.com"
-            },
-            "todo_project": {
-                "id": 1,
-                "td_users": [
-                    {
-                        "id": 1,
-                        "username": "Surgeom",
-                        "first_name": "Кирилл",
-                        "last_name": "Ушакевич",
-                        "email": "ush@gmail.com"
-                    },
-                    {
-                        "id": 2,
-                        "username": "try1",
-                        "first_name": "Кирилл",
-                        "last_name": "Пушкин",
-                        "email": "ushakevichkirill@gmail.com"
-                    }
-                ],
-                "proj_name": "TODoProject",
-                "repo_url": null
-            },
-            "todo_text": "cdc",
-            "created": "2021-09-23",
-            "is_active": true
-        }]
+            'todos':[]
         }
     }
     componentDidMount(){
