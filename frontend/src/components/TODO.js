@@ -14,10 +14,9 @@ const ToDoItem = ({todo})=>{
 }
 
 const ToDoList =({todos})=>{
-     console.log(todos)
      let { id } = useParams();
      if (todos.length !==0){
-     let filtered_items = todos.filter((tod) => todos.todo_project.id === +id)
+     let filtered_items = todos.filter((todos) => todos.todo_project.id === +id)
      return (
         <table>
             <th>Text</th>
