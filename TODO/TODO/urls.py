@@ -21,7 +21,7 @@ from projectapp.views import UsersProjectViewSet, TODOViewSet
 
 router = DefaultRouter()
 # router.register('tduser', TODOUserViewSet)
-router.register('usersproj', UsersProjectViewSet)
+router.register('projects', UsersProjectViewSet)
 router.register('todo', TODOViewSet)
 router.register('tdusers', TODOUserViewSet, basename='tdusers')
 
