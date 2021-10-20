@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'drf_yasg',
     'corsheaders',
+    'graphene_django',
     'usersapp',
     'projectapp',
 
@@ -145,4 +146,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
 
+}
+GRAPHENE = {
+    "SCHEMA": "TODO.schema.schema"
 }
